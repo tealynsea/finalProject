@@ -5,6 +5,9 @@ var indexController = {
 	},
 	mentee: function(req, res) {
 		res.render('mentee');
+	},
+	mentor: function(req, res) {
+		res.render('mentor')
 	}
 };
 

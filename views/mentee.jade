@@ -2,6 +2,23 @@ extends layout
 
 block content
 
+    nav.navbar.navbar-default(role="navigation")
+        .navbar-header
+            button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse")
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href='#')
+                p WCMN
+
+        .collapse.navbar-collapse.navbar-exl-collapse
+            ul.nav.navbar-nav.navbar-right
+                li 
+                    a(href="#") Feedback
+                li
+                    a(href="#") something
+
     div.top
     form.form-horizontal(method="post", id="loginForm")
       label Username
@@ -9,7 +26,7 @@ block content
       label Password
       input.span3(id="password", type="password", name="Password")
       input.btn(type="submit", value="Log In")
-  div.container
+    div.container
     div.content
       table.table.table-striped
         thead
