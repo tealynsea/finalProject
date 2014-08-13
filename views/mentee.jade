@@ -2,43 +2,113 @@ extends layout
 
 block content
 
-    nav.navbar.navbar-default(role="navigation")
-        .navbar-header
-            button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse")
-                span.sr-only Toggle navigation
-                span.icon-bar
-                span.icon-bar
-                span.icon-bar
-            a.navbar-brand(href='#')
-                p WCMN
+      div.container        
+            nav.navbar.navbar-default(role="navigation")
+                  .navbar-header
+                        button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse")
+                              span.sr-only Toggle navigation
+                              span.icon-bar
+                              span.icon-bar
+                              span.icon-bar
+                        a.navbar-brand(href='#')
+                              p WCMN
 
-        .collapse.navbar-collapse.navbar-exl-collapse
-            ul.nav.navbar-nav.navbar-right
-                li 
-                    a(href="#") Feedback
-                li
-                    a(href="#") something
+                  .collapse.navbar-collapse.navbar-exl-collapse
+                        ul.nav.navbar-nav.navbar-right
+                              li 
+                                    a(href="#") Feedback
+                              li
+                                    a(href="#") something
 
-    div.top
-    form.form-horizontal(method="post", id="loginForm")
-      label Username
-      input.span3(id="username", type="text", name="User", placeholder="Enter your username")
-      label Password
-      input.span3(id="password", type="password", name="Password")
-      input.btn(type="submit", value="Log In")
-    div.container
-    div.content
-      table.table.table-striped
-        thead
-          tr
-            th Table
-            th Heading
-        tbody
-          tr
-            td Blah
-            td Test
-          tr
-            td Hello
-            td World
- 
-  div.footer
+            div.top
+            h1 Mentee Application
+            form.form-horizontal(method="post" id="signupForm")
+               label Username
+               input.span3(id="username" type="text" name="User" placeholder="Create User Name")
+               label Password
+               input.span3(id="password" type="password" name="Password" placeholder="Create Password")
+               //-input.btn(type="submit", value="")
+             
+               h3 Languages
+               p Please click on the language that you are interested in using during mentorship
+               
+               .radio
+                  label
+                     input#optionsRadios1(type='radio' name='optionsRadios' value='option1')
+                     | C language
+               .radio
+                  label
+                     input#optionsRadios2(type='radio' name='optionsRadios' value='option2')
+                     | C++
+               .radio
+                  label
+                     input#optionsRadios3(type='radio' name='optionsRadios' value='option3')
+                     | C#
+               .radio
+                  label
+                     input#optionsRadios4(type='radio' name='optionsRadios' value='option4')
+                     | Objective C
+               .radio
+                  label
+                     input#optionsRadios5(type='radio' name='optionsRadios' value='option5')
+                     | Java
+               .radio
+                  label
+                     input#optionsRadios6(type='radio' name='optionsRadios' value='option6')
+                     | PHP
+               .radio
+                  label
+                     input#optionsRadios7(type='radio' name='optionsRadios' value='option7')
+                     | Python
+               .radio
+                  label
+                     input#optionsRadios8(type='radio' name='optionsRadios' value='option8')
+                     | Ruby
+               .radio
+                  label
+                     input#optionsRadios9(type='radio' name='optionsRadios' value='option9')
+                     | JavaScript
+               .radio
+                  label
+                     input#optionsRadios10(type='radio' name='optionsRadios' value='option10')
+                     | C language
+               
+                     .row
+                        .col-md-4
+                           .input-group
+                              span.input-group-btn
+                                 button.btn.btn-default(type="button") Other 
+                              input.form-control(type="text")
+                        
+
+                  h4 Please answer questions in text area provided
+
+                  p What are your goals in working with a mentor?
+                     textarea(class="form-control" rows="3" placeholder="Type answer here")
+                  
+                  p Do you have a specific project that your are using that a mentor could help you with?
+                     textarea(class="form-control" rows="3" placeholder="Type answer here")
+
+                  p Do you have a deadline for accomplishing your goals/completing your project?
+                     textarea(class="form-control" rows="3" placeholder="Type answer here")
+
+                  p What are some of your interests and hobbies?
+                     textarea(class="form-control" rows="3" placeholder="Type answer here")
+
+                  button.btn.btn-primary(method='post' action='/postForm' type='button') Submit
+                
+
+
+
+
+
+
+
+
+
+
+                      
+
+       
+   
+

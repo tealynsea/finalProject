@@ -14,6 +14,10 @@ app.get('/mentee', indexController.mentee);
 
 app.get('/mentor', indexController.mentor);
 
+app.post('/postForm', function(req, res) {
+	console.log(req.body)
+})
+
 var server = app.listen(3325, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });
