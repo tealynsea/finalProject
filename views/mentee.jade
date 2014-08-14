@@ -20,82 +20,80 @@ block content
                               li
                                     a(href="#") something
 
-            div.top
+         div.top
             h1 Mentee Application
-            form.form-horizontal(method="post" id="signupForm")
+            form.form-horizontal#signupFormtee(method="post" action="/postForm")
+               input.span3(type="hidden", name="mentee")
                label Username
                input.span3(id="username" type="text" name="User" placeholder="Create User Name")
                label Password
                input.span3(id="password" type="password" name="Password" placeholder="Create Password")
-               //-input.btn(type="submit", value="")
+               
              
                h3 Languages
                p Please click on the language that you are interested in using during mentorship
                
                .radio
                   label
-                     input#optionsRadios1(type='radio' name='optionsRadios' value='option1')
-                     | C language
+                     input#optionsRadios1(type='radio' name='optionsRadios' value='C Language')
+                     | C Language
                .radio
                   label
-                     input#optionsRadios2(type='radio' name='optionsRadios' value='option2')
+                     input#optionsRadios2(type='radio' name='optionsRadios' value='C++')
                      | C++
                .radio
                   label
-                     input#optionsRadios3(type='radio' name='optionsRadios' value='option3')
+                     input#optionsRadios3(type='radio' name='optionsRadios' value='C#')
                      | C#
                .radio
                   label
-                     input#optionsRadios4(type='radio' name='optionsRadios' value='option4')
+                     input#optionsRadios4(type='radio' name='optionsRadios' value='ObjectiveC')
                      | Objective C
                .radio
                   label
-                     input#optionsRadios5(type='radio' name='optionsRadios' value='option5')
+                     input#optionsRadios5(type='radio' name='optionsRadios' value='Java')
                      | Java
                .radio
                   label
-                     input#optionsRadios6(type='radio' name='optionsRadios' value='option6')
+                     input#optionsRadios6(type='radio' name='optionsRadios' value='PHP')
                      | PHP
                .radio
                   label
-                     input#optionsRadios7(type='radio' name='optionsRadios' value='option7')
+                     input#optionsRadios7(type='radio' name='optionsRadios' value='Python')
                      | Python
                .radio
                   label
-                     input#optionsRadios8(type='radio' name='optionsRadios' value='option8')
+                     input#optionsRadios8(type='radio' name='optionsRadios' value='Ruby')
                      | Ruby
                .radio
                   label
-                     input#optionsRadios9(type='radio' name='optionsRadios' value='option9')
+                     input#optionsRadios9(type='radio' name='optionsRadios' value='JavaScript')
                      | JavaScript
                .radio
                   label
-                     input#optionsRadios10(type='radio' name='optionsRadios' value='option10')
-                     | C language
-               
-                     .row
-                        .col-md-4
-                           .input-group
-                              span.input-group-btn
-                                 button.btn.btn-default(type="button") Other 
-                              input.form-control(type="text")
+                     input#optionsRadios10(type='radio' name='optionsRadios' value='node')
+                     | node.js
+               .radio
+                  label
+                     input#optionsRadios11(type='radio' name='optionsRadios' value='other')
+                     | other
                         
 
                   h4 Please answer questions in text area provided
 
                   p What are your goals in working with a mentor?
-                     textarea(class="form-control" rows="3" placeholder="Type answer here")
+                     textarea(class="form-control" id="specificGoals" name="goals" rows="3" placeholder="Type answer here")
                   
                   p Do you have a specific project that your are using that a mentor could help you with?
-                     textarea(class="form-control" rows="3" placeholder="Type answer here")
+                     textarea(class="form-control" id="specificProject" name="project" rows="3" placeholder="Type answer here")
 
                   p Do you have a deadline for accomplishing your goals/completing your project?
-                     textarea(class="form-control" rows="3" placeholder="Type answer here")
+                     textarea(class="form-control" id="deadline" name="deadLine" rows="3" placeholder="Type answer here")
 
                   p What are some of your interests and hobbies?
-                     textarea(class="form-control" rows="3" placeholder="Type answer here")
+                     textarea(class="form-control" id="intrestsHobbies" name="interests" rows="3" placeholder="Type answer here")
 
-                  button.btn.btn-primary(method='post' action='/postForm' type='button') Submit
+               input.btn(type="submit", value="submit")
                 
 
 

@@ -9,6 +9,10 @@ var indexController = {
 	mentor: function(req, res) {
 		res.render('mentor')
 	}
+	
+
 };
+
+
 
 module.exports = indexController;
