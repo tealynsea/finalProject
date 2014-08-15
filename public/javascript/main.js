@@ -18,6 +18,7 @@ $(function() {
 				name: user,
 				password: password,
 				goals: goals,
+				deadline: deadLine,
 				projects: project,
 				interests: interests
 			},
@@ -43,9 +44,13 @@ $(function() {
 			name: user,
 			password: password,
 			goals: goals,
-			teacing: teaching,
+			teaching: teaching,
 			schedule: schedule,
 			interests: interests
-		})
+		},
+		function(data) {
+
+		}
+		)
 	})
 })

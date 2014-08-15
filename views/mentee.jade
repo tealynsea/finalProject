@@ -23,11 +23,11 @@ block content
          div.top
             h1 Mentee Application
             form.form-horizontal#signupFormtee(method="post" action="/postForm")
-               input.span3(type="hidden", name="mentee")
+               input.span3(type="hidden" name="role" value="mentee")
                label Username
-               input.span3(id="username" type="text" name="User" placeholder="Create User Name")
+               input.span3(id="username" type="text" name="user" placeholder="Create User Name")
                label Password
-               input.span3(id="password" type="password" name="Password" placeholder="Create Password")
+               input.span3(id="password" type="password" name="password" placeholder="Create Password")
                
              
                h3 Languages

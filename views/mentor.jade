@@ -22,11 +22,11 @@ block content
           div.top
             h1 Mentor Application
             form.form-horizontal#signupFormtor(method="post" action="/postForm")
-               input.span3(type="hidden", name="mentor")
+               input.span3(type="hidden" name="role" value="mentor")
                label Username
-               input.span3(id="username", type="text", name="User", placeholder="Create User Name")
+               input.span3(id="username", type="text", name="user", placeholder="Create User Name")
                label Password
-               input.span3(id="password", type="password", name="Password", placeholder="Create Password")
+               input.span3(id="password", type="password", name="password", placeholder="Create Password")
                input.btn(type="submit", value="Log In")
             
 
