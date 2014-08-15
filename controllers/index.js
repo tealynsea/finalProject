@@ -21,6 +21,7 @@ var indexController = {
 
 	var userName = req.body.user;
 	var password = req.body.password;
+	var language = req.body.optionsRadios;
 	var goals = req.body.goals;
 	var project = req.body.project;
 	var interests = req.body.interests;
@@ -32,6 +33,7 @@ console.log(req.body);
 		var newApplication = new menteeModel({
 			user: userName,
 			password: password,
+			language: language,
 			goals: goals,
 			project: project,
 			interests: interests
@@ -42,6 +44,7 @@ console.log(req.body);
 		var newApplication = new mentorModel({
 			user: userName,
 			password: password,
+			language: language,
 			goals: goals,
 			teaching: teaching,
 			schedule: schedule,

@@ -4,6 +4,7 @@ var mentorSchema = mongoose.model('mentorSchema', {
 
 	user: String,
 	password: String,
+	language: String,
 	goals:  String,
 	teaching:  String,
 	schedule:  String,

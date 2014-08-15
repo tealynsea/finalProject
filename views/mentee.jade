@@ -2,8 +2,8 @@ extends layout
 
 block content
 
-      div.container        
-            nav.navbar.navbar-default(role="navigation")
+      .container    
+         nav.navbar.navbar-default(role="navigation")
                   .navbar-header
                         button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse")
                               span.sr-only Toggle navigation
@@ -23,77 +23,78 @@ block content
          div.top
             h1 Mentee Application
             form.form-horizontal#signupFormtee(method="post" action="/postForm")
-               input.span3(type="hidden" name="role" value="mentee")
-               label Username
-               input.span3(id="username" type="text" name="user" placeholder="Create User Name")
-               label Password
-               input.span3(id="password" type="password" name="password" placeholder="Create Password")
+                  .form-group   
+                     input.span3(type="hidden" name="role" value="mentee")
+                     label Username
+                     input.span3(id="username" type="text" name="user" placeholder="Create User Name")
+                     label Password
+                     input.span3(id="password" type="password" name="password" placeholder="Create Password")
                
              
-               h3 Languages
-               p Please click on the language that you are interested in using during mentorship
+            h3 Languages
+            p Please click on the language that you are interested in using during mentorship
                
-               .radio
-                  label
-                     input#optionsRadios1(type='radio' name='optionsRadios' value='C Language')
-                     | C Language
-               .radio
-                  label
-                     input#optionsRadios2(type='radio' name='optionsRadios' value='C++')
-                     | C++
-               .radio
-                  label
-                     input#optionsRadios3(type='radio' name='optionsRadios' value='C#')
-                     | C#
-               .radio
-                  label
-                     input#optionsRadios4(type='radio' name='optionsRadios' value='ObjectiveC')
-                     | Objective C
-               .radio
-                  label
-                     input#optionsRadios5(type='radio' name='optionsRadios' value='Java')
-                     | Java
-               .radio
-                  label
-                     input#optionsRadios6(type='radio' name='optionsRadios' value='PHP')
-                     | PHP
-               .radio
-                  label
-                     input#optionsRadios7(type='radio' name='optionsRadios' value='Python')
-                     | Python
-               .radio
-                  label
-                     input#optionsRadios8(type='radio' name='optionsRadios' value='Ruby')
-                     | Ruby
-               .radio
-                  label
-                     input#optionsRadios9(type='radio' name='optionsRadios' value='JavaScript')
-                     | JavaScript
-               .radio
-                  label
-                     input#optionsRadios10(type='radio' name='optionsRadios' value='node')
-                     | node.js
-               .radio
-                  label
-                     input#optionsRadios11(type='radio' name='optionsRadios' value='other')
-                     | other
+            .radio
+               label
+                  input#optionsRadios1(type='radio' name='optionsRadios' value='C Language')
+                  | C language
+            .radio
+               label
+                  input#optionsRadios2(type='radio' name='optionsRadios' value='C++')
+                  | C++
+            .radio
+               label
+                  input#optionsRadios3(type='radio' name='optionsRadios' value='C#')
+                  | C#
+            .radio
+               label
+                  input#optionsRadios4(type='radio' name='optionsRadios' value='Objective C')
+                  | Objective C
+            .radio
+               label
+                  input#optionsRadios5(type='radio' name='optionsRadios' value='Java')
+                  | Java
+            .radio
+               label
+                  input#optionsRadios6(type='radio' name='optionsRadios' value='PHP')
+                  | PHP
+            .radio
+               label
+                  input#optionsRadios7(type='radio' name='optionsRadios' value='Python')
+                  | Python
+            .radio
+               label
+                  input#optionsRadios8(type='radio' name='optionsRadios' value='Ruby')
+                  | Ruby
+            .radio
+               label
+                  input#optionsRadios9(type='radio' name='optionsRadios' value='JavaScript')
+                  | JavaScript
+            .radio
+               label
+                  input#optionsRadios10(type='radio' name='optionsRadios' value='node')
+                  | node.js
+            .radio
+               label
+                  input#optionsRadios11(type='radio' name='optionsRadios' value='other')
+                  | other
                         
 
-                  h4 Please answer questions in text area provided
+            h3 Please answer questions in text area provided
 
-                  p What are your goals in working with a mentor?
-                     textarea(class="form-control" id="specificGoals" name="goals" rows="3" placeholder="Type answer here")
-                  
-                  p Do you have a specific project that your are using that a mentor could help you with?
-                     textarea(class="form-control" id="specificProject" name="project" rows="3" placeholder="Type answer here")
+            p What are your goals in working with a mentor?
+               textarea(class="form-control" id="specificGoals" name="goals" rows="3" placeholder="Type answer here")
+            
+            p Do you have a specific project that your are using that a mentor could help you with?
+               textarea(class="form-control" id="specificProject" name="project" rows="3" placeholder="Type answer here")
 
-                  p Do you have a deadline for accomplishing your goals/completing your project?
-                     textarea(class="form-control" id="deadline" name="deadLine" rows="3" placeholder="Type answer here")
+            p Do you have a deadline for accomplishing your goals/completing your project?
+               textarea(class="form-control" id="deadline" name="deadLine" rows="3" placeholder="Type answer here")
 
-                  p What are some of your interests and hobbies?
-                     textarea(class="form-control" id="intrestsHobbies" name="interests" rows="3" placeholder="Type answer here")
+            p What are some of your interests and hobbies?
+               textarea(class="form-control" id="intrestsHobbies" name="interests" rows="3" placeholder="Type answer here")
 
-               input.btn(type="submit", value="submit")
+            input.btn(type="submit", value="submit")
                 
 
 
