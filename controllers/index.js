@@ -1,11 +1,14 @@
 var menteeModel = require('../models/menteeModel.js')
 var mentorModel = require('../models/mentorModel.js')
+var User = require('../models/user.js')
 
 
 
 var indexController = {
 	index: function(req, res) {
-		res.render('index');
+		res.render('index', {
+			user: req.user
+		});
 
 	},
 	mentee: function(req, res) {
@@ -13,6 +16,9 @@ var indexController = {
 	},
 	mentor: function(req, res) {
 		res.render('mentor')
+	},
+	signin: function(req, res) {
+		res.render('signin')
 	},
 	
 
@@ -54,7 +60,20 @@ console.log(req.body);
 	newApplication.save()
 
 	res.send("ok")
-}
+},
+
+ dashboard: function(req, res) {
+ 	//res.send(req.user)
+ 	var role = (req.user.role === "mentor")? "mentee": "mentor"
+ 	User.find({role: role}, function(err, docs){
+
+ 	res.render('dashboard', {
+ 		user: req.user,
+ 		allUsers: docs
+ 	})
+ 		
+ 	})
+ }
 
 };
 

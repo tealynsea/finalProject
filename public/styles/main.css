@@ -1,4 +1,8 @@
- 
+@media (min-width: 1200px) {
+	.container {
+		max-width: 970px;
+	}
+}
 
 h4 {
 	margin-bottom: 25px;

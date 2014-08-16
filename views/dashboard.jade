@@ -1,0 +1,8 @@
+extends layout
+
+block content
+
+	h1 Welcome, #{user.username}
+	ul
+		for person in allUsers
+			li #{person.username}, #{person.language}
