@@ -29,7 +29,9 @@ var userSchema = mongoose.Schema({
   interests: String,
   teaching:  String,
   schedule:  String,
-  role: String
+  role: String,
+  area: String,
+  experience: String
 });
 
 /**

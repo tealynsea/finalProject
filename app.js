@@ -1,9 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-	// commented out unitl we can get help
-// var indexController = require('./controllers/index.js');
-
+	 
 var app = express();
 
 //-------------added for passport--------------
@@ -43,8 +41,6 @@ mongoose.connect('mongodb://localhost/express-passport-local');
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
-	// commented out until we get help
-// app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser());
 
 //-------------added for passport--------------
@@ -96,8 +92,7 @@ app.use(passportConfig.ensureAuthenticated);
 
 //-----------end of passport-------
 
-//app.post('/postForm', function(req, res) {
-	//console.log(req.body)
+ 
 
 // route to add to db applications
 //app.post('/postForm', indexController.addApplication)

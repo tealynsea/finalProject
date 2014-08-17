@@ -1,14 +1,17 @@
-var mongoose = require('mongoose');
+//this file uneeded after passport installation
 
-var menteeSchema = mongoose.model('menteeSchema', {
 
-	user: String,
-	password: String,
-	language: String,
-	goals: String,
-	project: String,
-	interests: String
+// var mongoose = require('mongoose');
 
-});
+// var menteeSchema = mongoose.model('menteeSchema', {
 
-module.exports = menteeSchema
+// 	user: String,
+// 	password: String,
+// 	language: String,
+// 	goals: String,
+// 	project: String,
+// 	interests: String
+
+// });
+
+// module.exports = menteeSchema

@@ -99,6 +99,8 @@ var authenticationController = {
     var interests = req.body.interests;
     var teaching = req.body.teaching;
     var schedule = req.body.schedule;
+    var area = req.body.optionsinCheck;
+    var experience = req.body.optionsCheck;
     var user = new User({
       username: userName,
       password: password,
@@ -109,8 +111,11 @@ var authenticationController = {
       interests: interests,
       role: role,
       language: language,
-      project: project
+      project: project,
+      area: area,
+      experience: experience
     });
+    console.log(area);
 
     // Now that the user is created, we'll attempt to save them to the
     // database.

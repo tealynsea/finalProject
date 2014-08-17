@@ -1,56 +1,58 @@
-$(function() {
+//not in use.  I think this was taken over in /models/user.js
 
-	$('#signupFormtee').on('submit', function(e){
-		e.preventDefault();
+// $(function() {
 
-
-
-		var user = $('#username').val();	
-		var password = $('#password').val();
-		var goals = $('#specificGoals').val();
-		var deadline = $ ('#deadline').val();
-		var project = $('#specificProject').val();
-		var intrests = $('#intrestsHobbies').val();
+// 	$('#signupFormtee').on('submit', function(e){
+// 		e.preventDefault();
 
 
-		$.post('/postForm', 
-			{
-				name: user,
-				password: password,
-				goals: goals,
-				deadline: deadLine,
-				projects: project,
-				interests: interests
-			},
-			function(data) {
+
+// 		var user = $('#username').val();	
+// 		var password = $('#password').val();
+// 		var goals = $('#specificGoals').val();
+// 		var deadline = $ ('#deadline').val();
+// 		var project = $('#specificProject').val();
+// 		var intrests = $('#intrestsHobbies').val();
+
+
+// 		$.post('/postForm', 
+// 			{
+// 				name: user,
+// 				password: password,
+// 				goals: goals,
+// 				deadline: deadLine,
+// 				projects: project,
+// 				interests: interests
+// 			},
+// 			function(data) {
 				
-			}
-			)
-	})
+// 			}
+// 			)
+// 	})
 
-	$('#signupFormtor').on('submit', function(e) {
-		e.preventDefault();
+// 	$('#signupFormtor').on('submit', function(e) {
+// 		e.preventDefault();
 
-		var user = $('#username').val();
-		var password = $('#password').val();
-		var language = $('#')
-		var goals = $('#goalsMentor').val();
-		var teaching = $('teachingStyle').val();
-		var schedule = $('availability').val();
-		var interests = $('interestsMentor').val();
+// 		var user = $('#username').val();
+// 		var password = $('#password').val();
+// 		var language = $('#')
+// 		var goals = $('#goalsMentor').val();
+// 		var teaching = $('teachingStyle').val();
+// 		var schedule = $('availability').val();
+// 		var interests = $('interestsMentor').val();
 
-		$.post('/postForm',
-		{
-			name: user,
-			password: password,
-			goals: goals,
-			teaching: teaching,
-			schedule: schedule,
-			interests: interests
-		},
-		function(data) {
+// 		$.post('/postForm',
+// 		{
+// 			name: user,
+// 			password: password,
+// 			goals: goals,
+// 			teaching: teaching,
+// 			schedule: schedule,
+// 			interests: interests
+// 		},
+// 		function(data) {
 
-		}
-		)
-	})
-})
+// 		}
+// 		)
+// 	})
+// })

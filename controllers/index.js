@@ -33,6 +33,8 @@ var indexController = {
 	var interests = req.body.interests;
 	var teaching = req.body.teaching;
 	var schedule = req.body.schedule;
+	var area = req.body.optionsCheck;
+	var experience = req.body.optionsCheck;
 
 console.log(req.body);
 	if(req.body.role === 'mentee'){
@@ -42,7 +44,9 @@ console.log(req.body);
 			language: language,
 			goals: goals,
 			project: project,
-			interests: interests
+			interests: interests,
+			area: area,
+			experience: experience
 		});
 	}
 	else if(req.body.role === 'mentor'){
@@ -54,7 +58,9 @@ console.log(req.body);
 			goals: goals,
 			teaching: teaching,
 			schedule: schedule,
-			interests: interests
+			interests: interests,
+			area: area,
+			experience: experience
 		})
 	}
 	newApplication.save()
