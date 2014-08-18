@@ -10,7 +10,7 @@ block content
                             span.icon-bar
                             span.icon-bar
                             span.icon-bar
-                      a.navbar-brand(href='/')
+                      a.navbar-brand(href='/')  
                             p WCMN
 
                 .collapse.navbar-collapse.navbar-exl-collapse
@@ -22,9 +22,11 @@ block content
 
     .container    
         h1 Welcome, #{user.username}
-        h3 Possible Mentees
+        h3 Possible Matches
         ul.list-unstyled#available
             for person in allUsers
                 li#profile #{person.username}, #{person.language}, #{person.area}, #{person.experience}
+                  a.btn.btn-primary.pull-right#contactButton(href='mailto:#{person.email}', role='button') contact
+                  a.btn.btn-primary.pull-right#seeProfileButton(href="/" role='button') See Profile
         //- Give users a link to log out of their account
         p: a(href="/auth/logout") Log out
