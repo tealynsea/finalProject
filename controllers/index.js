@@ -35,6 +35,7 @@ var indexController = {
 	var schedule = req.body.schedule;
 	var area = req.body.optionsCheck;
 	var experience = req.body.optionsCheck;
+	var summary = req.body.summary;
 
 console.log(req.body);
 	if(req.body.role === 'mentee'){
@@ -46,7 +47,8 @@ console.log(req.body);
 			project: project,
 			interests: interests,
 			area: area,
-			experience: experience
+			experience: experience,
+			summary: summary
 		});
 	}
 	else if(req.body.role === 'mentor'){
@@ -60,7 +62,8 @@ console.log(req.body);
 			schedule: schedule,
 			interests: interests,
 			area: area,
-			experience: experience
+			experience: experience,
+			summary: summary
 		})
 	}
 	newApplication.save()

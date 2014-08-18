@@ -25,8 +25,13 @@ block content
         h3 Possible Matches
         ul.list-unstyled#available
             for person in allUsers
-                li#profile #{person.username}, #{person.language}, #{person.area}, #{person.experience}
-                  a.btn.btn-primary.pull-right#contactButton(href='mailto:#{person.email}', role='button') contact
-                  a.btn.btn-primary.pull-right#seeProfileButton(href="/" role='button') See Profile
+                li.profile #{person.username}, #{person.language}, #{person.area}, #{person.experience}
+                
+              
+                  a.btn.btn-primary.pull-right.contactButton(href='mailto:#{person.email}', role='button') contact
+                  a.btn.btn-primary.pull-right.seeProfileButton(href="/" role='button') See Profile
+                  .summary #{person.summary} 
+                  
+
         //- Give users a link to log out of their account
         p: a(href="/auth/logout") Log out

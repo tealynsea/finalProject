@@ -31,7 +31,8 @@ var userSchema = mongoose.Schema({
   schedule:  String,
   role: String,
   area: String,
-  experience: String
+  experience: String,
+  summary: String
 });
 
 /**

@@ -1,5 +1,7 @@
 //not in use.  I think this was taken over in /models/user.js
 
+// SEE BOTTOM FOR CODE FOR JQUERY HANDLER
+
 // $(function() {
 
 // 	$('#signupFormtee').on('submit', function(e){
@@ -56,3 +58,12 @@
 // 		)
 // 	})
 // })
+ $(function() {
+ 	console.log('main.js says hello');
+	$(document).on('click', '.seeProfileButton', function(e){
+		e.preventDefault()
+
+		$(this).closest('.profile').find('.summary').slideToggle()
+
+	})
+})

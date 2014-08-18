@@ -101,6 +101,7 @@ var authenticationController = {
     var schedule = req.body.schedule;
     var area = req.body.optionsinCheck;
     var experience = req.body.optionsCheck;
+    var summary = req.body.summary;
     var user = new User({
       username: userName,
       password: password,
@@ -113,7 +114,8 @@ var authenticationController = {
       language: language,
       project: project,
       area: area,
-      experience: experience
+      experience: experience,
+      summary: summary
     });
     console.log(area);
 
