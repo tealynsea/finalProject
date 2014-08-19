@@ -20,6 +20,9 @@ var indexController = {
 	signin: function(req, res) {
 		res.render('signin')
 	},
+	resources: function(req, res) {
+		res.render('resources')
+	},
 	
 
 

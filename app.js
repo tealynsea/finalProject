@@ -84,6 +84,8 @@ app.get('/mentor', indexController.mentor);
 
 app.get('/signin', indexController.signin);
 
+app.get('/resources', indexController.resources)
+
 app.use(passportConfig.ensureAuthenticated);
 
 // Because this route occurs after the ensureAuthenticated middleware, it will require

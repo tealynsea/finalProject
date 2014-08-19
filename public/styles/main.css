@@ -4,6 +4,7 @@
 	}
 }
 
+
 h4 {
 	margin-bottom: 25px;
 	margin-top: 25px;
@@ -39,3 +40,31 @@ label {
 .summary {
 	display: none;
 }
+
+#myCarousel {
+	margin-top: 30px;
+}
+
+#myCarousel .item {
+	height: 500px;
+
+}
+
+#slide1 {
+	background: url(../../images/Skillcrush02.png) no-repeat;
+	margin: 0 auto;
+}
+
+#slide2 {
+	background: url(../../images/Made_w_Code.png);
+}
+
+#slide3 {
+	background: url(../../images/womenwhocode-f71ba0c8.jpg) no-repeat;
+	margin-left: 484px;
+}
+
+#features {
+	margin-top: 100px;
+}
+
