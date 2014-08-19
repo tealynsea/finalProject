@@ -20,6 +20,7 @@ label {
 	text-align: center;
 	margin-top: 200px;
 	padding: 10px;
+
 }
 
 #available {
@@ -30,6 +31,7 @@ label {
 	border: 2px solid black;
 	padding: 10px;
 	height: 55px;
+	height: 100px;
 }
 
 .contactButton {
@@ -41,6 +43,8 @@ label {
 	display: none;
 }
 
+/*--------Resources page---------*/
+
 #myCarousel {
 	margin-top: 30px;
 }
@@ -51,20 +55,33 @@ label {
 }
 
 #slide1 {
-	background: url(../../images/Skillcrush02.png) no-repeat;
+	background: url(../../images/skillcrush_banner.jpg) center no-repeat;
 	margin: 0 auto;
 }
 
 #slide2 {
-	background: url(../../images/Made_w_Code.png);
+	background: url(../../images/Made_w_Code.png) center no-repeat;
 }
 
 #slide3 {
-	background: url(../../images/womenwhocode-f71ba0c8.jpg) no-repeat;
+	background: url(../../images/womenwhocode-f71ba0c8.jpg) center left no-repeat;
 	margin-left: 484px;
 }
 
 #features {
 	margin-top: 100px;
 }
+
+/*------------ footer ----------------*/
+
+footer {
+	border: 1px solid black;
+	background-color: black;
+	color: white;
+
+}
+
+
+
+
 

@@ -100,6 +100,13 @@ app.use(passportConfig.ensureAuthenticated);
 //app.post('/postForm', indexController.addApplication)
 app.get('/dashboard', indexController.dashboard)
 
+app.post('/savePublic', indexController.public)
+
+app.get('/admin', indexController.admin)
+
+app.post('/admin/approve/:id', indexController.approve)
+app.post('/admin/delete/:id', indexController.delete)
+
 var server = app.listen(3325, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });

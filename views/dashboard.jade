@@ -22,6 +22,21 @@ block content
 
     .container    
         h1 Welcome, #{user.username}
+        h3 Do you want your profile to be available to possible mentors/mentees?
+        form.form(action='/savePublic' method='post')
+          .radio
+            label
+              input#availView(type='radio' name='optionsRadio' value='yes' checked=user.public)
+              | Yes 
+          .radio
+            label
+              input#noAvailView(type='radio' name='optionsRadio' value='no' checked=!user.public)
+              | No
+          .form-group
+            input(type='submit')
+       
+
+
         h3 Possible Matches
         ul.list-unstyled#available
             for person in allUsers

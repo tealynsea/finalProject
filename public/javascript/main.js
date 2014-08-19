@@ -66,4 +66,18 @@
 		$(this).closest('.profile').find('.summary').slideToggle()
 
 	})
+    $(document).on('click', '.approveButton', function(e){
+		e.preventDefault()
+		var userId = ($(this).closest('.profile').data('id'))
+		$.post(('/admin/approve/' + userId))
+		$(this).closest('.profile').remove()
+	})
+	$(document).on('click', '.deleteButton', function(e){
+		e.preventDefault()
+		var userId = ($(this).closest('.profile').data('id'))
+		$.post(('/admin/delete/' + userId))
+		$(this).closest('.profile').remove()
+
+	})
+
 })

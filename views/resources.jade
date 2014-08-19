@@ -20,100 +20,82 @@ block content
                     a(href="#") Feedback
                 li
                     a(href="#") Blank
-  //- This is the carousel
-  .carousel-slide#myCarousel
-    ol.carousel-indicators
-      li.active(data-slide-to='0' data-target="myCarousel")
-      li(data-slide-to='1' data-target="myCarousel")
-      li(data-slide-to='2' data-target="myCarousel")
+    //- This is the carousel
+    .carousel.slide#myCarousel
+      ol.carousel-indicators
+        li.active(data-slide-to='0' data-target="#myCarousel")
+        li(data-slide-to='1' data-target="#myCarousel")
+        li(data-slide-to='2' data-target="#myCarousel")
 
-    .carousel-inner
-      #slide1.item.active
-                   
-        .carousel-caption
-          h4 Skillcrush
-            p
-              | Skillcrush.com
-      #slide2.item           
-        .carousel-caption
-          //- h4 Learn to code in 4 hours!
-          //-   p
-          //-     | PSD to HTML/CSS....blah blah
-      #slide3.item          
-        .carousel-caption
-          //- h4 WEbhosting
-          //-   p
-          //-     | Something Else!
-      
-          a.left.carousel-control(data-slide='prev' href='#myCarousel')
-            span.icon-prev
-          a.right.carousel-control(data-slide='next' href='#myCarousel')
-            span.icon-next
+      .carousel-inner
+        #slide1.item.active
+                     
+          .carousel-caption
+            h4 Skillcrush
+              p Skillcrush.com
+        #slide2.item           
+          .carousel-caption
+            //- h4 Learn to code in 4 hours!
+            //-   p
+            //-     | PSD to HTML/CSS....blah blah
+        #slide3.item          
+          .carousel-caption
+            //- h4 WEbhosting
+            //-   p
+            //-     | Something Else!
+        
+      a.left.carousel-control(data-slide='prev' href='#myCarousel')
+        span.icon-prev
+      a.right.carousel-control(data-slide='next' href='#myCarousel')
+        span.icon-next
 
   #features.row
     .col-sm-6.col-md-4
       .thumbnail
-        img(src="http://placehold.it/300x300")
-      .carousel-caption
-        h3 Thumbnail label
-        p lorem ipsum shite
-        p 
-          a.btn.btn-primary(href='http://google.com' role='button') Button
+        img(src='../../images/skillcrush101.png')
+        .caption
+          h3 Skillcrush
+          p Woman created/Woman owned.  Check out the Skillcrush career blueprint plan for aspiring web developers and web designers.
+          p
+           
+            a.btn.btn-primary(href='http://skillcrush.com' role='button') Button
     .col-sm-6.col-md-4
       .thumbnail
-        img(src="http://placehold.it/300x300")
-        .carousel-caption
-          h3 Thumbnail label
-          p lorem ipsum shite
+        img(src="../../images/phpsMQS98AM.jpg")
+        .caption
+          h3 Made with Code
+          p Google created to inspire women and girls to learn to code.  Great stories and great ideas!
           p 
-            a.btn.btn-primary(href='http://google.com' role='button') Button
+            a.btn.btn-primary(href='http://madewithcode.com' role='button') Button
     .col-sm-6.col-md-4
       .thumbnail
-        img(src="http://placehold.it/300x300")
-        .carousel-caption
-          h3 Thumbnail label
-          p lorem ipsum shite
+        img(src="../../images/phpd83ivxAM.jpg")
+        .caption
+          h3 Women Who Code
+          p Check out the Women Who Code Meetup.  The Denver/Boulder chapter has the 2nd largest contingent in the country.
           p 
-            a.btn.btn-primary(href='http://google.com' role='button') Button
+            a.btn.btn-primary(href='http://womenwhocode.com' role='button') Button
 
-  //- #featuresHeading.row
-  //-   .col-12
-  //-     h2 Great resources for women who code!
-  //-     p Check out some of these great websites aimed at promoting women in coding!
+  footer
+                .container
+                    .row
+                        .col-sm-4
+                            h6 Copyright © 2013 Teri Castle
+                        .col-sm-4
+                            h6 About Teri
+                            p
+                                | Lucas ipsum dolor sit amet wicket antilles wedge mandalorians droid kenobi mandalore moff obi-wan ben. Palpatine gonk kenobi moff. Boba moff dantooine anakin. Luke lando darth moff kenobi darth wedge darth. Jar mon dantooine solo wookiee anakin kenobi darth kenobi.
+                        .col-sm-4
+                            h6 navigation
+                            ul.unstyled
+                                li
+                                    a(href='/') Home
+                                li
+                                    a(href='#') Services
+                                li 
+                                    a(href='mailto:tealynsea@hotmail.com') Contact Teri
 
-  //-       #features.row
-  //-         .col-sm-4.features
-  //-           .panel
-  //-             .panel-heading
-  //-               h3.panel-title Skillcrush
-  //-           img(src="../../images/skillcrush101.png")
-  //-           p Woman created.  Woman owned.  Has blogs, screencasts, webinars, a 10 day bootcamp, and even Skillcrush Blueprints-a career path blueprint for web development or web design.
-  //-           a.btn.btn-info.btn-block(href="https://www.skillcrush.com/") Go To Skillcrush!
-  //-       #features.row
-  //-         .col-sm-4.features
-  //-           .panel
-  //-             .panel-heading
-  //-               h3.panel-title Made With Code
-  //-           img(src="../../images/made_with_code.jpg")
-  //-           p Google created to inspire women and girls to learn to code.  Great stories and great ideas!
-  //-           a.btn.btn-info.btn-block(href="https://www.madewithcode.com/") Go To Made With Code!
-  //-       #features.row
-  //-         .col-sm-4.features
-  //-           .panel
-  //-             .panel-heading
-  //-               h3.panel-title Women Who Code!
-  //-           img(src="../../images/women_who_code.jpg")
-  //-           p The Denver/Boulder chapter has the 2nd largest contingent in the country.
-  //-           a.btn.btn-info.btn-block(href="https://www.womenwhocode.com/") Go To Women Who Code!
-
-
-
-
-
-
-
-
-
+   
 
 
 

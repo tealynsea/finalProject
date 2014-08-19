@@ -23,7 +23,48 @@ var indexController = {
 	resources: function(req, res) {
 		res.render('resources')
 	},
-	
+	public: function(req, res) {
+		req.user.public = (req.body.optionsRadio === "yes")? true: false;
+		req.user.save(function(){
+
+		res.redirect('/dashboard')
+		})
+	},
+	admin: function(req, res) {
+		if (req.user.username === "admin"){
+			User.find({approved: false}, function(err, docs){
+
+	 			res.render('admin', {
+	 		 
+	 				allUsers: docs
+	 			})
+	 		})
+		}
+		else{
+			res.send(403);
+		}
+	},
+	// change approve from false to true for user where _id = req.params.id
+	approve: function(req, res) {
+		if (req.user.username === "admin"){
+			User.findByIdAndUpdate(req.params.id, {approved: true}, function(error, results) {
+			console.log('approving', req.params.id)
+			})
+		}
+		else{
+			res.send(403);
+		}	
+	},
+	// delete user where _id = req.params.id
+	delete: function(req, res) {
+		if (req.user.username === "admin"){
+			User.findByIdAndRemove( req.params.id, function(error, results) {
+			})
+		}
+		else{
+			res.send(403);
+		}
+	},
 
 
   addApplication: function(req, res) {
@@ -75,9 +116,9 @@ console.log(req.body);
 },
 
  dashboard: function(req, res) {
- 	//res.send(req.user)
+ 	console.log(req.user)
  	var role = (req.user.role === "mentor")? "mentee": "mentor"
- 	User.find({role: role}, function(err, docs){
+ 	User.find({role: role, public: true, approved: true}, function(err, docs){
 
  	res.render('dashboard', {
  		user: req.user,

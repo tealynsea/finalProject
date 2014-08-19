@@ -32,7 +32,15 @@ var userSchema = mongoose.Schema({
   role: String,
   area: String,
   experience: String,
-  summary: String
+  summary: String,
+  public: {
+    type: Boolean,
+    default: false
+  },
+  approved: {
+    type: Boolean,
+    default: false
+  }
 });
 
 /**

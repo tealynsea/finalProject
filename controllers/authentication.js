@@ -22,7 +22,10 @@ var performLogin = function(req, res, next, user){
     if(err) return next(err);
 
     // Otherwise, send the user to the homepage.
-    return res.redirect('/dashboard');
+    if (req.user.username === "admin")
+      return res.redirect('/admin');
+    else
+      return res.redirect('/dashboard');
   });
 };
 
