@@ -43,6 +43,17 @@ label {
 	display: none;
 }
 
+.welcome {
+	margin-top: 100px;
+}
+
+.navbar-header {
+	margin: 10px;
+}
+
+div.jumbotron { 
+	margin-top: 85px;
+}
 /*--------Resources page---------*/
 
 #myCarousel {
