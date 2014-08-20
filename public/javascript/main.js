@@ -59,24 +59,24 @@
 // 	})
 // })
  $(function() {
- 	console.log('main.js says hello');
+ 	 
 	$(document).on('click', '.seeProfileButton', function(e){
 		e.preventDefault()
 
-		$(this).closest('.profile').find('.summary').slideToggle()
+		$(this).closest('.available').find('.summary').slideToggle()
 
 	})
     $(document).on('click', '.approveButton', function(e){
 		e.preventDefault()
-		var userId = ($(this).closest('.profile').data('id'))
+		var userId = ($(this).closest('.available').data('id'))
 		$.post(('/admin/approve/' + userId))
-		$(this).closest('.profile').remove()
+		$(this).closest('.available').remove()
 	})
 	$(document).on('click', '.deleteButton', function(e){
 		e.preventDefault()
-		var userId = ($(this).closest('.profile').data('id'))
+		var userId = ($(this).closest('.available').data('id'))
 		$.post(('/admin/delete/' + userId))
-		$(this).closest('.profile').remove()
+		$(this).closest('.available').remove()
 
 	})
 

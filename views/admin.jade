@@ -3,31 +3,48 @@ extends layout
 block content
 
 
-	.container    
-		nav.navbar.navbar-inverse.navbar-fixed-top(role="navigation")
-			.navbar-header
-						button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse")
-								span.sr-only Toggle navigation
-								span.icon-bar
-								span.icon-bar
-								span.icon-bar
-						a.navbar-brand(href='/')  
-								p WCMN
+    .container
+            nav.navbar.navbar-inverse.navbar-fixed-top(role="navigation")
+                .container    
 
-					.collapse.navbar-collapse.navbar-exl-collapse
-						ul.nav.navbar-nav.navbar-right
-								li 
-									a(href="#") Feedback
-								li
-									a(href="#") something
-		.approvalList
-			ul.list-unstyled#available
-				for person in allUsers
-					li.profile(data-id="#{person._id}") #{person.username}, #{person.language}, #{person.area}, #{person.experience}
-					
+                    .navbar-header
+                        button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse")
+                            span.sr-only Toggle navigation
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                        a.navbar-brand(href='/')
+                            p WCMN
 
-						a.btn.btn-primary.pull-right.approveButton(href='#') Approve Button
-						a.btn.btn-primary.pull-right.deleteButton(href='#') Delete Button
+                    .collapse.navbar-collapse.navbar-exl-collapse
+                        ul.nav.navbar-nav.navbar-right
+                            li 
+                                a(href="/resources") Resources
+                            li
+                                a(href="#") Blank
+                            li
+                                a(href="/auth/login") Sign In
+
+            h1#admin Hello, Admin
+            h3 Below is the list of applicants waiting for approval.
+            .approvalList
+                for person in allUsers
+                    ul.list-unstyled.available(data-id="#{person._id}")
+                        li.profile(data-id="#{person._id}") User Name: #{person.username}
+                        li.profile(data-id="#{person._id}") Programming Language: #{person.language}
+                        li.profile(data-id="#{person._id}") Geographical Location: #{person.area}
+                        li.profile(data-id="#{person._id}") Level of experience: #{person.experience}
+                        li.profile(data-id="#{person._id}") Goals: #{person.goals}
+                        li.profile(data-id="#{person._id}") Possible project: #{person.project}
+                        li.profile(data-id="#{person._id}") Interests: #{person.interests}
+                        li.profile(data-id="#{person._id}") Teaching Style: #{person.teaching}
+                        li.profile(data-id="#{person._id}") Schedule: #{person.schedule}
+                        li.profile(data-id="#{person._id}") Role: #{person.role}
+                        li.buttons
+                        
+
+                            a.btn.btn-primary.pull-right.approveButton(href='#') Approve Button
+                            a.btn.btn-primary.pull-right.deleteButton(href='#') Delete Button
 
 
 
