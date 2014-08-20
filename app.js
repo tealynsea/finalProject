@@ -35,7 +35,7 @@ var authenticationController = require('./controllers/authentication');
 	// commented out until we get help
 // mongoose.connect('mongodb://localhost/applications')
 	// database connect for passport
-mongoose.connect('mongodb://localhost/express-passport-local');
+mongoose.connect(process.env.MONGOHQ_URL || 'mongodb://localhost/express-passport-local');
 
 
 app.set('view engine', 'jade');
@@ -107,6 +107,6 @@ app.get('/admin', indexController.admin)
 app.post('/admin/approve/:id', indexController.approve)
 app.post('/admin/delete/:id', indexController.delete)
 
-var server = app.listen(3325, function() {
+var server = app.listen(process.env.PORT || 3325, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });
