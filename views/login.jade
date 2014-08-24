@@ -20,8 +20,9 @@ block content
                         a(href="/resources") Resources
                     li
                         a(href="#") Blank
-                    li
-                        a(href="/auth/login") Sign In
+                    li.dropdown
+                        a.dropdown-toggle(href="/auth/login" data-toggle="dropdown") Sign In
+
                           
     //- Error comes through via the context passed when calling res.render('login', {...})
     //- You'll see this in controllers/authentication.js

@@ -15,6 +15,10 @@ label {
 	margin-left: 10px;
 }
 
+input {
+	margin: 5px;
+}
+
 #background {
 	background: url(../../images/greybackgroun.jpeg) ;
 	height: 100%;
@@ -26,6 +30,11 @@ label {
 	text-align: center;
 	margin-top: 200px;
 	padding: 10px;
+
+}
+
+#dropdownForm {
+	padding: 15px;
 
 }
 
@@ -98,6 +107,7 @@ div.jumbotron {
 
 #myCarousel .item {
 	height: 500px;
+	background-color: black;
 
 }
 

@@ -14,14 +14,21 @@ block content
                         a.navbar-brand(href='/')
                             p WCMN
 
-                    .collapse.navbar-collapse.navbar-exl-collapse
-                        ul.nav.navbar-nav.navbar-right
+                    .nav-collapse
+                        ul.nav.pull-right
                             li 
                                 a(href="/resources") Resources
                             li
                                 a(href="#") Blank
-                            li
-                                a(href="/auth/login") Sign In
+                            li.divider-vertical
+
+                            li.dropdown
+                                a.dropdown-toggle(href="/auth/login" data-toggle="dropdown") Sign In
+                                .dropdown-menu#dropdownForm
+                                    form(action="/auth/login", method="post")
+                                      input(type="text", name="username", placeholder="Username")
+                                      input(type="password", name="password", placeholder="Password")
+                                      input(type="submit" class="btn btn-primary")
             
 
             div.jumbotron
