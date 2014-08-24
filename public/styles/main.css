@@ -15,6 +15,12 @@ label {
 	margin-left: 10px;
 }
 
+#background {
+	background: url(../../images/greybackgroun.jpeg) ;
+	height: 100%;
+	width: 100%;
+}
+
 #signinForm {
 	border: 2px solid black;
 	text-align: center;
@@ -105,8 +111,17 @@ div.jumbotron {
 }
 
 #slide3 {
-	background: url(../../images/womenwhocode-f71ba0c8.jpg) center left no-repeat;
-	margin-left: 484px;
+	background: url(../../images/womenwhocode-f71ba0c8.jpg) center no-repeat;
+}
+
+#slide4 {
+	background: url(../../images/orig.jpg) center no-repeat;
+	
+}
+
+.carousel-caption {
+	color: black;
+	font-size: 14px;
 }
 
 #features {
