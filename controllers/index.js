@@ -65,6 +65,7 @@ var indexController = {
 			res.send(403);
 		}
 	},
+	
 
 
   addApplication: function(req, res) {

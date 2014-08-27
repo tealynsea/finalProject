@@ -19,6 +19,11 @@ input {
 	margin: 5px;
 }
 
+.btn {
+	background-color: black;
+	color: white;
+}
+
 #background {
 	background: url(../../images/greybackgroun.jpeg) ;
 	height: 100%;

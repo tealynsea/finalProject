@@ -14,8 +14,8 @@ block content
                         a.navbar-brand(href='/')
                             p WCMN
 
-                    .nav-collapse
-                        ul.nav.pull-right
+                    .collapse.navbar-collapse.navbar-exl-collapse
+                        ul.nav.navbar-nav.navbar-right
                             li 
                                 a(href="/resources") Resources
                             li
@@ -28,7 +28,7 @@ block content
                                     form(action="/auth/login", method="post")
                                       input(type="text", name="username", placeholder="Username")
                                       input(type="password", name="password", placeholder="Password")
-                                      input(type="submit" class="btn btn-primary")
+                                      input(type="submit" class="btn")
             
 
             div.jumbotron
@@ -49,16 +49,16 @@ block content
                         img(src='./images/mentee.jpg' alt='photo credit morgueFile.com')
                         div.caption
                             h3 Mentee Application
-                            p Nonsensical stuff about how awesome it is to be learning stuff
-                            a.btnbtn-primary(href="/mentee") Apply
+                            p Apply here to be considered for mentorship.
+                            a.btn.btn-primary(href="/mentee") Apply
 
                 div.col-sm-6
                     div.thumbnail
                         img(src="./images/mentor.jpg" alt="photo credit morgueFile.com")
                         div.caption
                             h3 Mentor Application
-                            p Nonsensical stuff about how awesome it is to help new coders.
-                            a.btnbtn-primary(href="/mentor") Apply
+                            p Apply here to become a mentor.
+                            a.btn.btn-primary(href="/mentor") Apply
 
             footer
                 .container
