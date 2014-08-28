@@ -38,22 +38,24 @@ block content
                     input(type='submit')
                
 
-
-                h3 Possible Matches
-                for person in allUsers
-                  ul.list-unstyled.available
-                        li.profile User Name:  #{person.username}
-                        li.profile Preferred Language:  #{person.language}
-                        li.profile Area:  #{person.area}
-                        li.profile Level of experience:  #{person.experience}
-                        li.summary 
-                          div.summaryContent A little about myself...#{person.summary}
-                        li.buttons
-                        
+                if user.approved == true
+                  h3 Possible Matches
+                  for person in allUsers
+                    ul.list-unstyled.available
+                          li.profile User Name:  #{person.username}
+                          li.profile Preferred Language:  #{person.language}
+                          li.profile Area:  #{person.area}
+                          li.profile Level of experience:  #{person.experience}
+                          li.summary 
+                            div.summaryContent A little about myself...#{person.summary}
+                          li.buttons
                           
-                          a.btn.btn-primary.pull-right.contactButton(href='mailto:#{person.email}', role='button') contact
-                          a.btn.btn-primary.pull-right.seeProfileButton(href="/" role='button') See Profile
-                           
+                            
+                            a.btn.btn-primary.pull-right.contactButton(href='mailto:#{person.email}', role='button') contact
+                            a.btn.btn-primary.pull-right.seeProfileButton(href="/" role='button') See Profile
+                else 
+                  h3 Application pending approval
+                             
                           
 
                 //- Give users a link to log out of their account
