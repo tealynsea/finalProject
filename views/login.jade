@@ -18,10 +18,15 @@ block content
                 ul.nav.navbar-nav.navbar-right
                     li 
                         a(href="/resources") Resources
-                    li
-                        a(href="#") Blank
+                    li.dropdown
+                        a(href='mailto:tealynsea@hotmail.com?Subject=Feedback WCMN') Feedback
                     li.dropdown
                         a.dropdown-toggle(href="/auth/login" data-toggle="dropdown") Sign In
+                        .dropdown-menu#dropdownForm
+                            form(action="/auth/login", method="post")
+                              input(type="text", name="username", placeholder="Username")
+                              input(type="password", name="password", placeholder="Password")
+                              input(type="submit" class="btn").dropdown-toggle(href="/auth/login" data-toggle="dropdown") Sign In
 
                           
     //- Error comes through via the context passed when calling res.render('login', {...})

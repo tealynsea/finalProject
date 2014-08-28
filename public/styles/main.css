@@ -79,6 +79,12 @@ input {
 .summaryContent {
 	border: 1px solid black;
 	width: 425px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 4px;
+	font-size: 15px;
+	font-style: italic;
+	padding: 4px;
 }
 
 .welcome {
