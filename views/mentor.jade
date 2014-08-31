@@ -21,122 +21,119 @@ block content
                             a(href="/resources") Resources
                         li
                             a(href='mailto:tealynsea@hotmail.com?Subject=Feedback WCMN') Feedback
-                        li
-                            a(href="/auth/login") Sign In
-
         .top
             h1 Mentor Application
-            form.form-horizontal#signupFormtor(method="post" action="/auth/signup")
-               input.span3(type="hidden" name="role" value="mentor")
+            form.form-horizontal#signupForm(method="post" action="/auth/signup")
+               input.span3.form-control(type="hidden" name="role" value="mentor")
                label Username
-               input.span3(id="username", type="text", name="user", placeholder="Create User Name")
+               input.span3.form-control(id="username", type="text", name="user", placeholder="Create User Name")
                label Password
-               input.span3(id="password", type="password", name="password", placeholder="Create Password")
+               input.span3.form-control(id="password", type="password", name="password", placeholder="Create Password")
                label Email
-               input.span3(id="email" type="email" name="email" placeholder="enter email")
+               input.span3.form-control(id="email" type="email" name="email" placeholder="enter email")
             
-               h3 Introduce yourself!
-               p Tell us about you. Write a little summary to help potential mentors or mentees get to know you?
-                        textarea(class="form-control" id="summary" name="summary" rows="4" placeholder="Type answer here")
+        h3 Introduce yourself!
+          p Tell us about you. Write a little summary to help potential mentees get to know you?
+                textarea(class="form-control" id="summary" name="summary" rows="4" placeholder="Type answer here")
 
 
-               h3 Languages
-               p Please click on the language that you are interested in using during mentorship
+        h3 Languages
+         p Please click on the language that you are interested in using during mentorship
+            
+         .radio
+            label
+               input#optionsRadios1(type='radio' name='optionsRadios' value='C Language')
+               | C language
+         .radio
+            label
+               input#optionsRadios2(type='radio' name='optionsRadios' value='C++')
+               | C++
+         .radio
+            label
+               input#optionsRadios3(type='radio' name='optionsRadios' value='C#')
+               | C#
+         .radio
+            label
+               input#optionsRadios4(type='radio' name='optionsRadios' value='Objective C')
+               | Objective C
+         .radio
+            label
+               input#optionsRadios5(type='radio' name='optionsRadios' value='Java')
+               | Java
+         .radio
+            label
+               input#optionsRadios6(type='radio' name='optionsRadios' value='PHP')
+               | PHP
+         .radio
+            label
+               input#optionsRadios7(type='radio' name='optionsRadios' value='Python')
+               | Python
+         .radio
+            label
+               input#optionsRadios8(type='radio' name='optionsRadios' value='Ruby')
+               | Ruby
+         .radio
+            label
+               input#optionsRadios9(type='radio' name='optionsRadios' value='JavaScript')
+               | JavaScript
+         .radio
+            label
+               input#optionsRadios10(type='radio' name='optionsRadios' value='node')
+               | node.js
+         .radio
+            label
+               input#optionsRadios11(type='radio' name='optionsRadios' value='other')
+               | other
                   
-               .radio
-                  label
-                     input#optionsRadios1(type='radio' name='optionsRadios' value='C Language')
-                     | C language
-               .radio
-                  label
-                     input#optionsRadios2(type='radio' name='optionsRadios' value='C++')
-                     | C++
-               .radio
-                  label
-                     input#optionsRadios3(type='radio' name='optionsRadios' value='C#')
-                     | C#
-               .radio
-                  label
-                     input#optionsRadios4(type='radio' name='optionsRadios' value='Objective C')
-                     | Objective C
-               .radio
-                  label
-                     input#optionsRadios5(type='radio' name='optionsRadios' value='Java')
-                     | Java
-               .radio
-                  label
-                     input#optionsRadios6(type='radio' name='optionsRadios' value='PHP')
-                     | PHP
-               .radio
-                  label
-                     input#optionsRadios7(type='radio' name='optionsRadios' value='Python')
-                     | Python
-               .radio
-                  label
-                     input#optionsRadios8(type='radio' name='optionsRadios' value='Ruby')
-                     | Ruby
-               .radio
-                  label
-                     input#optionsRadios9(type='radio' name='optionsRadios' value='JavaScript')
-                     | JavaScript
-               .radio
-                  label
-                     input#optionsRadios10(type='radio' name='optionsRadios' value='node')
-                     | node.js
-               .radio
-                  label
-                     input#optionsRadios11(type='radio' name='optionsRadios' value='other')
-                     | other
-                        
-               h3 What area are you from?
-                .checkbox-inline
-                  label
-                      input#inlineCheckbox1(type='checkbox' name='optionsinCheck' value='Denver')
-                      | Denver
-                .checkbox-inline
-                  label
-                      input#inlineCheckbox2(type='checkbox' name='optionsinCheck' value='Boulder')
-                      | Boulder
-               h3 What level of coder do you consider yourself?
-                .checkbox
-                  label
-                      input#checkbox(type='checkbox' name='optionsCheck' value='Beginning Beginner')
-                      | Beginning Beginner
-                .checkbox
-                  label
-                      input#checkbox(type='checkbox' name='optionsCheck' value='Solid Begninner')
-                      | Advanced Beginner
-                .checkbox
-                  label
-                      input#checkbox(type='checkbox' name='optionsCheck' value='Intermediate')
-                      | Intermediate
-                .checkbox
-                  label
-                      input#checkbox(type='checkbox' name='optionsCheck' value='Advanced')
-                      | Advanced
+         h3 What area are you from?
+          .checkbox-inline
+            label
+                input#inlineCheckbox1(type='checkbox' name='optionsinCheck' value='Denver')
+                | Denver
+          .checkbox-inline
+            label
+                input#inlineCheckbox2(type='checkbox' name='optionsinCheck' value='Boulder')
+                | Boulder
+         h3 What level of coder do you consider yourself?
+          .checkbox
+            label
+                input#checkbox(type='checkbox' name='optionsCheck' value='Beginning Beginner')
+                | Beginning Beginner
+          .checkbox
+            label
+                input#checkbox(type='checkbox' name='optionsCheck' value='Solid Begninner')
+                | Advanced Beginner
+          .checkbox
+            label
+                input#checkbox(type='checkbox' name='optionsCheck' value='Intermediate')
+                | Intermediate
+          .checkbox
+            label
+                input#checkbox(type='checkbox' name='optionsCheck' value='Advanced')
+                | Advanced
 
 
 
 
 
-               h3 Why Mentor?
+         h3 Why Mentor?
 
-               p When entering into a mentoring partnership, both parties commit to a shared effort. Mentoring is a great gift.  Please take some time to help us better understand why you want to mentor and your goals in being a mentor.
+         p When entering into a mentoring partnership, both parties commit to a shared effort. Mentoring is a great gift.  Please take some time to help us better understand why you want to mentor and your goals in being a mentor.
 
 
-                     p What are your goals in working with a mentee?
-                        textarea(class="form-control" id="goalsMentor" name="goals" rows="4" placeholder="Type answer here")
-                     
-                     p How do you plan to mentor budding women coders?  (Think about your personality, tempermanet and teaching style.)
-                        textarea(class="form-control" id="teachingStyle" name="teaching" rows="4" placeholder="Type answer here")
+               p What are your goals in working with a mentee?
+                  textarea(class="form-control" id="goalsMentor" name="goals" rows="4" placeholder="Type answer here")
+               
+               p How do you plan to mentor budding women coders?  (Think about your personality, tempermanet and teaching style.)
+                  textarea(class="form-control" id="teachingStyle" name="teaching" rows="4" placeholder="Type answer here")
 
-                     p What is your availability?
-                        textarea(class="form-control" id="availability" name="avail" rows="4" placeholder="Type answer here")
+               p What is your availability?
+                  textarea(class="form-control" id="availability" name="avail" rows="4" placeholder="Type answer here")
 
-                     p What are some of your interests and hobbies?
-                        textarea(class="form-control" id="interestsMentor" name="hobbies" rows="4" placeholder="Type answer here")
+               p What are some of your interests and hobbies?
+                  textarea(class="form-control" id="interestsMentor" name="hobbies" rows="4" placeholder="Type answer here")
 
-                     input.btn(type="submit", value="submit")
+               input.btn(type="submit", value="submit")
 
 
 

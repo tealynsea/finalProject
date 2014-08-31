@@ -20,14 +20,7 @@ block content
                         a(href="/resources") Resources
                     li.dropdown
                         a(href='mailto:tealynsea@hotmail.com?Subject=Feedback WCMN') Feedback
-                    li.dropdown
-                        a.dropdown-toggle(href="/auth/login" data-toggle="dropdown") Sign In
-                        .dropdown-menu#dropdownForm
-                            form(action="/auth/login", method="post")
-                              input(type="text", name="username", placeholder="Username")
-                              input(type="password", name="password", placeholder="Password")
-                              input(type="submit" class="btn").dropdown-toggle(href="/auth/login" data-toggle="dropdown") Sign In
-
+                     
                           
     //- Error comes through via the context passed when calling res.render('login', {...})
     //- You'll see this in controllers/authentication.js
@@ -38,10 +31,19 @@ block content
 
       //- Form for handling existing user logins.
     h1#signinForm Existing Users
-      form(action="/auth/login", method="post")
-        input(type="text", name="username", placeholder="Username")
-        input(type="password", name="password", placeholder="Password")
-        input(type="submit")
+      form.form-horizontal(action="/auth/login", method="post", role="form")
+        .form-group
+          label.col-sm-2.control-label(for='username') Username
+          .col-sm-10    
+            input#username.form-control(type="text", name="username", placeholder="Username")
+        .form-group
+          label.col-sm-2.control-label(for='password') Password
+          .col-sm-10
+            input#password.form-control(type="password", name="password", placeholder="Password")
+        .form-group
+          .col-sm-2.col-sm-10
+            button.btn.btn-default(type='submit') Sign in
+            //- input(type="submit")
 
   //- Form for allowing new users to register.
   //- h1 Register
