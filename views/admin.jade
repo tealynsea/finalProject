@@ -45,8 +45,9 @@ block content
 
                             a.btn.btn-primary.pull-right.approveButton(href='#') Approve Button
                             a.btn.btn-primary.pull-right.deleteButton(href='#') Delete Button
-            p: a(href="/auth/logout") Log out
+                        //- a.btn.btn-primary.pull-right.emailButtonApprove(href='mailto:#{person.email}?body=You have been approved') Send Approval Email
+            a.btn.btn-primary(href="/auth/logout") Log out
 
 
-
+ 
 

@@ -5,6 +5,7 @@
 }
 
 
+
 h4 {
 	margin-bottom: 25px;
 	margin-top: 25px;
@@ -29,19 +30,15 @@ input {
 	margin-right: 15px;
 
 }
-#background {
-	background: url(../../images/black-grey-grungy-texture_070907.jpg) no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-}
-
-#dashbg {
+body {
 	background: url(../../images/light_grey_3000x3000.jpg) no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
+	height: auto;
 }
+
+ 
 
 #signinForm {
 	border: 2px solid black;
@@ -83,7 +80,8 @@ input {
 }
 
 .top {
-	margin-top: 20px;
+	margin: 20px 0;
+	
 }
 .summary {
 	display: none;
